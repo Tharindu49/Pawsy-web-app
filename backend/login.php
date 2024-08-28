@@ -1,4 +1,6 @@
 <?php
+ob_start(); // Start output buffering
+
 require '../config.php'; // Adjusted path if config.php is in the parent directory
 
 session_start(); // Ensure session management is started
@@ -58,4 +60,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = "Invalid username or password."; // Set error message for invalid username
     }
 }
+
+ob_end_flush(); // End output buffering and flush the output
 ?>
