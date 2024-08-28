@@ -1,0 +1,11 @@
+regenerating the session ID upon login to prevent session fixation attacks. (auth.php)
+Environment Variables: For security reasons, it's better to store database credentials (like $user, $pass, etc.) in environment variables instead of hard-coding them in your PHP files.(config.php)
+
+Prevent SQL Injection: Your current code is secure as you're using prepared statements, but it’s always good to be cautious with user input.(login)
+Limit Login Attempts: Implement a mechanism to limit the number of failed login attempts to prevent brute force attacks.(login)
+Use HTTPS: Ensure that your login form is served over HTTPS to protect against man-in-the-middle attacks.(login)
+Remember Me Option: Consider adding a "Remember Me" checkbox if you want users to stay logged in for a longer period without re-entering their credentials.(login)
+
+Use prepared statements with named parameters to prevent SQL injection.(inventory)
+
+Prevent multiple form submissions by disabling the submit button after the first click.(register)
