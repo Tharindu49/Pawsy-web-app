@@ -1,4 +1,10 @@
+<?php
+require 'auth.php';
+require 'config.php';
 
+$stmt = $pdo->query("SELECT inventory.*, categories.name AS category_name FROM inventory JOIN categories ON inventory.category = categories.id");
+$items = $stmt->fetchAll();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
