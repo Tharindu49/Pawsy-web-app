@@ -1,4 +1,5 @@
 <?php
+ob_start(); // Start output buffering
 session_start(); // Start the session
 require 'config.php'; // Include your database configuration
 
@@ -18,7 +19,8 @@ if (isset($_COOKIE['remember_me_token'])) {
     setcookie('remember_me_token', '', time() - 3600, '/');
 }
 
-// Regenerate session ID to prevent fixation attacks
+// Regenerate session ID safely
+session_write_close(); // Close the session before regenerating the ID
 session_regenerate_id(true);
 
 // Destroy the session
@@ -26,5 +28,6 @@ session_destroy();
 
 // Redirect to the login page
 header('Location: public/login.php');
+ob_end_flush(); // Flush the output buffer and send headers
 exit();
 ?>
