@@ -1,4 +1,6 @@
-
+<?php
+require '../backend/login.php';  // Include the backend logic
+?>
 
 <!DOCTYPE html>
 <html lang="en">
