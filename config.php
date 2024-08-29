@@ -1,3 +1,4 @@
+<?php
 // Database configuration
 $host = 'mathee-server.mysql.database.azure.com';
 $port = 3306;
@@ -18,3 +19,4 @@ if ($conn->connect_error) {
     echo json_encode(['status' => 'error', 'message' => 'Database connection failed']);
     exit();
 }
+?>
