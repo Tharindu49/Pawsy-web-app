@@ -1,5 +1,6 @@
 <?php
 require 'auth.php';
+$ssl_ca = '/home/site/wwwroot/ca-cert.pem';
 require 'config.php';
 
 $stmt = $pdo->query("SELECT inventory.*, categories.name AS category_name FROM inventory JOIN categories ON inventory.category = categories.id");
