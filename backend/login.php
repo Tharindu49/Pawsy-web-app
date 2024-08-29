@@ -1,6 +1,7 @@
 <?php
 ob_start(); // Start output buffering
 
+$ssl_ca = '/home/site/wwwroot/backend/ca-cert.pem';
 require '../config.php'; // Adjusted path if config.php is in the parent directory
 
 session_start(); // Ensure session management is started
