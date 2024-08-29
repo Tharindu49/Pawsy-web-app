@@ -7,7 +7,7 @@ $password = 'S6jWJmAcAI$WkuoQ';
 $dbname = 'petshop_db';
 
 // Path to your SSL certificate
-$ssl_ca = 'ca-cert.pem'; // Ensure this path is correct
+$ssl_ca = '/home/site/wwwroot/certs/ca-cert.pem'; // Ensure this path is correct
 
 // Create connection with SSL
 $conn = new mysqli();
