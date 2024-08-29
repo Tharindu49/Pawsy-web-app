@@ -4,7 +4,7 @@ $host = 'mathee-server.mysql.database.azure.com';
 $port = 3306;
 $username = 'cuyyrnkwgz';
 $password = 'S6jWJmAcAI$WkuoQ';
-$dbname = 'mathee-database';
+$dbname = 'petshop_db';
 
 // Path to your SSL certificate
 $ssl_ca = 'ca-cert.pem'; // Ensure this path is correct
